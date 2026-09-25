@@ -1,35 +1,30 @@
-# Wonderful Everyday · PT-BR
+# Wonderful Everyday · patch de teste PT-BR
 
-Tradução de fãs para português brasileiro de **Wonderful Everyday / Subarashiki Hibi**, para a **edição japonesa 15th Anniversary no Windows**.
+Tradução de fãs para a edição japonesa **15th Anniversary**, em Windows 10/11 de 64 bits.
 
-**Capítulos 1 e 2 — versão de testes 0.2.0-rc2.**
+Esta versão de teste inclui o texto PT-BR dos **116 roteiros com falas** catalogados, abrangendo capítulos 1 a 6, finais e extras. Os 61.256 registros textuais não vazios estão preenchidos. A revisão dos capítulos 3 em diante está em **92,36% (45.756 de 49.542)** em 25/09/2026; **3.786 entradas ainda aguardam revisão**. O patch pode conter erros de tradução, contexto e apresentação.
 
-[Baixar o patch de teste](https://github.com/lopilol/wonderful-everyday-ptbr/releases/tag/v0.2.0-rc2) · [Relatar um problema](https://github.com/lopilol/wonderful-everyday-ptbr/issues/new)
-
-## Conteúdo
-
-O patch cobre 22 roteiros dos capítulos 1 e 2, com **11.714 registros não vazios em português**. Também traduz menus, avisos iniciais, a sequência anterior ao primeiro capítulo, 28 imagens de escolhas e os créditos do capítulo 1. A abertura exibe a marca da Lopilol Traduções antes das marcas originais. Nenhuma cena é removida.
-
-Os 11.714 registros passaram pela revisão contextual completa. O teste manual de todas as rotas continua antes da versão 1.0.
+Os capítulos 1 e 2 foram revisados para a prévia anterior. Esta versão amplia o alcance do texto disponível para testes; não é uma tradução final, nem substitui o percurso jogável de todas as rotas. Menus e imagens localizados da prévia anterior estão incluídos. Cenas, imagens e interface posteriores ainda precisam de conferência completa.
 
 ## Compatibilidade
 
-- Windows 10/11 de 64 bits.
-- Edição japonesa **15th Anniversary** com os arquivos reconhecidos pelo instalador.
-- Outras edições não foram validadas.
-- O instalador não exige Python, conta ou internet.
-
-Desinstale uma versão anterior do patch antes de instalar esta. Use uma cópia limpa, sem outro patch.
+- Edição japonesa **Wonderful Everyday 15th Anniversary** para Windows, com os arquivos originais reconhecidos pelo instalador.
+- As edições Steam, Full Voice HD e outras versões não foram validadas para este pacote.
+- É necessário possuir o jogo; o ZIP não contém o executável ou os arquivos integrais originais.
+- O jogo contém temas adultos e sensíveis. Consulte os avisos da própria obra.
 
 ## Instalação
 
-1. Baixe o ZIP anexado em **Releases** e extraia todos os arquivos.
-2. Feche o jogo e abra **WonderfulEveryday-PTBR.exe**.
-3. Selecione a pasta que contém **BGI.exe** e clique em **Instalar**.
-4. Use **Verificar** e inicie o jogo.
+1. Feche o jogo. Se houver um patch anterior, remova-o primeiro pelo instalador da versão anterior.
+2. Extraia **todos** os arquivos do ZIP para a mesma pasta.
+3. Execute **WonderfulEveryday-PTBR.exe** e selecione a pasta da edição japonesa 15th Anniversary que contém **BGI.exe**.
+4. Clique em **Instalar**. O instalador confere os arquivos de origem, faz backup e só aplica o patch se a edição for compatível.
+5. Use **Verificar** após instalar. Para remover, escolha **Desinstalar** no mesmo instalador.
 
-O instalador valida a edição, cria backups e permite restaurar os arquivos pela opção **Desinstalar**.
+Não instale por cima de outro patch ou de arquivos modificados. O instalador interrompe a operação quando encontra uma versão incompatível. Guarde os backups que ele criar até terminar os testes.
 
-## Projeto
+## Problemas e sugestões
 
-Projeto independente, sem afiliação com KeroQ. É necessário possuir o jogo. O pacote contém somente diferenças de tradução e não inclui o jogo completo nem saves.
+Abra um relato em https://github.com/lopilol/wonderful-everyday-ptbr/issues/new informando a versão, edição, capítulo e um trecho curto. Evite spoilers no título e não envie arquivos completos do jogo nem saves pessoais.
+
+Patch independente de fãs. Jogos e artes pertencem aos titulares.
