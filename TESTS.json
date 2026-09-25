@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0-rc1",
+  "version": "0.3.0-rc4",
   "script_source_ids_controls_pointers": "PASS",
   "translation_records": 61256,
   "reviewed_scope": "45756/49542",
@@ -16,5 +16,11 @@
     "uninstall_restores_archives_and_removes_scripts",
     "verify_missing_returns_nonzero"
   ],
-  "public_provenance_scan": "PASS"
+  "public_provenance_scan": "PASS",
+  "choice_images_localized": 49,
+  "choice_images_inventoried": 49,
+  "choice_image_roundtrips": "PASS",
+  "all_choices_runtime_test": "PENDING",
+  "choice_sprite_suffix_check": "PASS",
+  "installer_provenance": "unchanged_sha256_from_audited_v0.3.0-rc1"
 }
