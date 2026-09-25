@@ -4,7 +4,7 @@ Tradução de fãs para português brasileiro de **Wonderful Everyday / Subarash
 
 **Capítulos 1 e 2 — versão de testes 0.2.0-rc2.**
 
-[Baixar o patch](https://github.com/poplol3mil/wonderful-everyday-ptbr/releases) · [Relatar um problema](https://github.com/poplol3mil/wonderful-everyday-ptbr/issues)
+[Baixar o patch de teste](https://github.com/lopilol/wonderful-everyday-ptbr/releases/tag/v0.2.0-rc2) · [Relatar um problema](https://github.com/lopilol/wonderful-everyday-ptbr/issues/new)
 
 ## Conteúdo
 
