@@ -1,10 +1,10 @@
 # Subarashiki Hibi (Subahibi) / Wonderful Everyday — patch de teste PT-BR
 
-Tradução de fãs para a edição japonesa **15th Anniversary**, em Windows 10/11 de 64 bits. **[Baixar o patch de teste v0.3.0-rc1](https://github.com/lopilol/wonderful-everyday-ptbr/releases/tag/v0.3.0-rc1)** · [Página do projeto](https://lopilol.github.io/subahibi/).
+Tradução de fãs para a edição japonesa **15th Anniversary**, em Windows 10/11 de 64 bits. **[Baixar o patch de teste v0.3.0-rc4](https://github.com/lopilol/wonderful-everyday-ptbr/releases/tag/v0.3.0-rc4)** · [Página do projeto](https://lopilol.github.io/subahibi/).
 
 Esta versão de teste inclui o texto PT-BR dos **116 roteiros com falas** catalogados, abrangendo capítulos 1 a 6, finais e extras. Os 61.256 registros textuais não vazios estão preenchidos. A revisão dos capítulos 3 em diante está em **92,36% (45.756 de 49.542)** em 25/09/2026; **3.786 entradas ainda aguardam revisão**. O patch pode conter erros de tradução, contexto e apresentação.
 
-Os capítulos 1 e 2 foram revisados para a prévia anterior. Esta versão amplia o alcance do texto disponível para testes; não é uma tradução final, nem substitui o percurso jogável de todas as rotas. Menus e imagens localizados da prévia anterior estão incluídos. Cenas, imagens e interface posteriores ainda precisam de conferência completa.
+As **49 imagens de escolhas do inventário** estão localizadas. A v0.3.0-rc4 corrige um resíduo de caracteres japoneses no botão “Cumprir logo o objetivo de hoje”, nos três estados da imagem. A revisão das demais artes, da interface e o teste jogável de todas as rotas ainda estão pendentes. Os capítulos 1 e 2 foram revisados para a prévia anterior. Esta versão não é uma tradução final.
 
 ## Compatibilidade
 
