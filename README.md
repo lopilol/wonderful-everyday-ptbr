@@ -24,6 +24,6 @@ Não instale por cima de outro patch ou de arquivos modificados. O instalador in
 
 ## Problemas e sugestões
 
-Abra um relato em https://github.com/lopilol/wonderful-everyday-ptbr/issues/new informando a versão, edição, capítulo e um trecho curto. Evite spoilers no título e não envie arquivos completos do jogo nem saves pessoais.
+As Issues públicas estão desativadas; os problemas identificados durante os testes são registrados internamente.
 
 Patch independente de fãs. Jogos e artes pertencem aos titulares.
