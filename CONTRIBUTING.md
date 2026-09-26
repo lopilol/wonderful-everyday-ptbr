@@ -1,7 +1,7 @@
 # Como contribuir
 
-Use as issues para relatar erros de tradução, problemas de instalação e sugestões. Inclua a versão e o contexto suficiente para reproduzir o problema. Marque spoilers.
+As Issues públicas estão desativadas. Os problemas identificados durante os testes são acompanhados internamente.
 
-Não envie arquivos integrais do jogo, saves com dados pessoais ou credenciais. Prefira um trecho curto de texto e uma descrição do problema.
+Ao propor alterações por pull request, não envie arquivos integrais do jogo, saves com dados pessoais ou credenciais. Evite spoilers desnecessários.
 
 Antes de enviar mudanças no instalador, teste instalação repetida, remoção, edição incompatível e preservação dos arquivos existentes numa cópia isolada.
