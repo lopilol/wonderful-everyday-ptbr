@@ -102,8 +102,14 @@ def write_atomic(path,data):
     temp.write_bytes(data)
     temp.replace(path)
 
+def validate_game_folder(game):
+    game = game.resolve()
+    if not game.is_dir() or not (game / 'BGI.exe').is_file():
+        raise ValueError('Selecione a pasta do jogo que contém BGI.exe.')
+    return game
+
 def install(game):
-    game=game.resolve(); assert_game_closed(game); manifest=load_manifest()
+    game=validate_game_folder(game); assert_game_closed(game); manifest=load_manifest()
     state=game/STATE; receipt_path=state/'receipt.json'; backup=state/'backup'
     if receipt_path.exists():
         receipt=json.loads(receipt_path.read_text(encoding='utf-8'))
@@ -118,7 +124,7 @@ def install(game):
         seen.add(name); archive=game/archive_name
         if archive_name not in archives:
             if sha(archive.read_bytes())!=item['archive_sha256']:
-                raise ValueError('Edicao incompativel: '+archive_name)
+                raise ValueError('O arquivo '+archive_name+' difere do original esperado. Pode haver um patch antigo ou outra edição. Restaure o backup original ou use uma instalação limpa da 15th Anniversary. Nenhum arquivo foi alterado.')
             archives[archive_name]=True
         original=extract_member(archive,name)
         if sha(original)!=item['source_sha256']: raise ValueError('Fonte incompativel: '+name)
@@ -178,11 +184,19 @@ def install(game):
     return f'Instalacao concluida: {len(prepared)} roteiros e {len(prepared_archives)} arquivos de dados.'
 
 def verify(game):
+    game=validate_game_folder(game)
     manifest=load_manifest(); good=0
+    receipt_path=game/STATE/'receipt.json'
+    if receipt_path.is_file():
+        receipt=json.loads(receipt_path.read_text(encoding='utf-8'))
+        if receipt.get('version')!=manifest['version']:
+            raise ValueError('Está instalada outra versão do patch ('+str(receipt.get('version', '?'))+'). Use o instalador dessa versão para verificar ou desinstalar antes de atualizar.')
     for item in manifest['files']:
         target=game/safe_name(item['member'])
         if not target.is_file() or sha(target.read_bytes())!=item['output_sha256']:
-            raise ValueError('Verificacao falhou: '+item['member'])
+            if not receipt_path.exists():
+                raise ValueError('Esta versão do patch não está instalada integralmente e não há recibo de instalação. O roteiro '+item['member']+' está ausente ou é de outra versão. Use Instalar patch em uma cópia limpa do jogo ou restaure os backups da instalação antiga.')
+            raise ValueError('O roteiro '+item['member']+' está ausente ou foi alterado após a instalação. A verificação não modificou nenhum arquivo.')
         good+=1
     graphics=0
     for item in manifest.get('graphics',[]):
@@ -193,8 +207,11 @@ def verify(game):
     return f'Verificados {good}/{len(manifest["files"])} roteiros e {graphics} arquivos de dados.'
 
 def uninstall(game):
-    game=game.resolve(); assert_game_closed(game); state=game/STATE
-    receipt_path=state/'receipt.json'; receipt=json.loads(receipt_path.read_text(encoding='utf-8'))
+    game=validate_game_folder(game); assert_game_closed(game); state=game/STATE
+    receipt_path=state/'receipt.json'
+    if not receipt_path.is_file():
+        raise ValueError('Não há recibo de instalação nesta pasta. Não é possível remover automaticamente um patch antigo aplicado fora deste instalador. Restaure o backup original ou reinstale o jogo. Nenhum arquivo foi alterado.')
+    receipt=json.loads(receipt_path.read_text(encoding='utf-8'))
     prepared=[]
     for item in receipt['files']:
         name=safe_name(item['name']); target=game/name

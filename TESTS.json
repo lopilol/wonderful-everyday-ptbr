@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0-rc8",
+  "version": "0.3.0-rc9",
   "script_source_ids_controls_pointers": "PASS",
   "translation_records": 61256,
   "filled_text_records": 61256,
@@ -25,6 +25,8 @@
   "tested_scripts": 116,
   "tested_data_archives": 4,
   "checks": [
+    "no_receipt_no_mutation",
+    "unknown_archive_rejected_without_mutation",
     "install",
     "repeat_preserves_receipt",
     "verify_all_hashes",
@@ -33,7 +35,7 @@
   ],
   "release_fields_compared_to_saved_json": 98590,
   "prior_release_strings_preserved": "PASS",
-  "installer_provenance": "newly_compiled_and_audited_rc8",
+  "installer_provenance": "newly_compiled_and_audited_rc9",
   "message_bar_images_localized": 4,
   "message_bar_icons_and_other_pixels_preserved": "PASS",
   "menu_labels_fit_slot": "PASS",
@@ -41,5 +43,8 @@
   "release_fields_changed_since_rc7": 0,
   "release_scripts_changed_since_rc7": 0,
   "menu_runtime_visual_test": "PENDING",
-  "installer_gui_launch": "PASS"
+  "installer_gui_launch": "PENDING",
+  "menu_original_icons_pixel_identical": "PASS",
+  "installer_gui_source_constructs": "PASS",
+  "legacy_recovery_isolated": "PASS"
 }

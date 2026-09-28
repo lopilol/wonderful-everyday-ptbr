@@ -1,5 +1,12 @@
 # Histórico de versões
 
+## 0.3.0-rc9 — 28/09/2026
+
+- Refaz as legendas sobre as quatro artes originais da barra, com fonte serifada e ícones idênticos ao original.
+- Explica quando há arquivos de outra versão ou uma instalação antiga sem recibo, antes de modificar qualquer arquivo.
+- Evita erro de arquivo inexistente ao tentar remover um patch sem recibo.
+- Amplia a área de mensagens do instalador.
+
 ## 0.3.0-rc8 — 28/09/2026
 
 - Ajusta o tamanho das oito legendas da barra inferior para aparecerem completas, preservando os ícones e quatro estados gráficos.

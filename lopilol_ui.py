@@ -46,8 +46,8 @@ def label(parent, text, *, size=10, color=INK, weight="normal", bg=PAPER, **kwar
 def build_window(config, preview=False, backend=None):
     root = tk.Tk()
     root.title("Lopilol Traduções — Instalador")
-    root.geometry("780x615")
-    root.minsize(700, 590)
+    root.geometry("780x690")
+    root.minsize(780, 690)
     root.configure(bg=INK)
 
     header = tk.Frame(root, bg=INK)
@@ -91,7 +91,7 @@ def build_window(config, preview=False, backend=None):
     status_box = tk.Frame(card, bg="#f5edf7", relief="sunken", borderwidth=2)
     status_box.pack(fill="x", padx=27, pady=(22, 18))
     label(status_box, "STATUS", size=9, weight="bold", color=VIOLET, bg="#f5edf7").pack(anchor="w", padx=13, pady=(10, 1))
-    tk.Label(status_box, textvariable=status, font=("Segoe UI", 10), fg=INK, bg="#f5edf7", anchor="w", wraplength=650, justify="left").pack(fill="x", padx=13, pady=(0, 11))
+    tk.Label(status_box, textvariable=status, font=("Segoe UI", 10), fg=INK, bg="#f5edf7", anchor="w", wraplength=620, justify="left").pack(fill="x", padx=13, pady=(0, 11))
 
     row = tk.Frame(card, bg=PAPER)
     row.pack(fill="x", padx=27)
