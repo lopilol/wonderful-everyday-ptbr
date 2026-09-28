@@ -1,8 +1,9 @@
 import argparse, base64, hashlib, json, struct, sys, os
 from pathlib import Path
 
-APP = "Wonderful Everyday PT-BR - Patch de teste"
+APP = "Wonderful Everyday PT-BR"
 STATE = ".wonderful-everyday-ptbr"
+LAUNCHER = "Jogar Wonderful Everyday.exe"
 
 def sha(data): return hashlib.sha256(data).hexdigest()
 
@@ -159,6 +160,13 @@ def install(game):
         else:
             raise ValueError('Edicao incompativel ou outro patch encontrado: '+archive_name)
         prepared_archives.append((archive_name,output,raw))
+    launcher_source = Path(sys.executable).parent / LAUNCHER if getattr(sys, 'frozen', False) else Path(__file__).parent / LAUNCHER
+    if not launcher_source.is_file():
+        raise ValueError('O iniciador do jogo não está no pacote. Extraia todo o ZIP antes de instalar.')
+    launcher_target = game / LAUNCHER
+    if launcher_target.is_symlink() or launcher_target.exists():
+        raise ValueError('Já existe um arquivo chamado '+LAUNCHER+' na pasta do jogo. Não foi alterado.')
+    prepared.append((LAUNCHER, launcher_source.read_bytes(), None))
     # Validate every archive and output before any installation mutation.
     backup.mkdir(parents=True,exist_ok=True)
     receipt={'version':manifest['version'],'files':[],'archives':[]}; applied=[]
@@ -181,7 +189,7 @@ def install(game):
             else: write_atomic(game/name,previous)
         if receipt_path.exists(): receipt_path.unlink()
         raise
-    return f'Instalacao concluida: {len(prepared)} roteiros e {len(prepared_archives)} arquivos de dados.'
+    return f'Instalação concluída: {len(prepared)-1} roteiros e {len(prepared_archives)} arquivos de dados. Para verificar atualizações ao abrir o jogo, use "{LAUNCHER}" na pasta do jogo.'
 
 def verify(game):
     game=validate_game_folder(game)
@@ -191,6 +199,9 @@ def verify(game):
         receipt=json.loads(receipt_path.read_text(encoding='utf-8'))
         if receipt.get('version')!=manifest['version']:
             raise ValueError('Está instalada outra versão do patch ('+str(receipt.get('version', '?'))+'). Use o instalador dessa versão para verificar ou desinstalar antes de atualizar.')
+        launchers=[item for item in receipt.get('files', []) if item.get('name') == LAUNCHER]
+        if len(launchers) != 1 or not (game/LAUNCHER).is_file() or sha((game/LAUNCHER).read_bytes()) != launchers[0].get('installed_sha256'):
+            raise ValueError('O iniciador do jogo está ausente ou foi alterado. A verificação não modificou nenhum arquivo.')
     for item in manifest['files']:
         target=game/safe_name(item['member'])
         if not target.is_file() or sha(target.read_bytes())!=item['output_sha256']:

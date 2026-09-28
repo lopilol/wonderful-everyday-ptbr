@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0-rc9",
+  "version": "0.3.0-rc10",
   "script_source_ids_controls_pointers": "PASS",
   "translation_records": 61256,
   "filled_text_records": 61256,
@@ -35,7 +35,7 @@
   ],
   "release_fields_compared_to_saved_json": 98590,
   "prior_release_strings_preserved": "PASS",
-  "installer_provenance": "newly_compiled_wizard_rc9",
+  "installer_provenance": "compiled_wizard_and_launcher_rc10",
   "message_bar_images_localized": 4,
   "message_bar_icons_and_other_pixels_preserved": "PASS",
   "menu_labels_fit_slot": "PASS",
@@ -51,5 +51,10 @@
   "installer_background_worker": "PASS",
   "installer_transparent_logo": "PASS",
   "installer_gui_runtime_visual": "PASS",
-  "installer_style": "Windows native wizard"
+  "installer_style": "Windows native wizard",
+  "launcher_release_selection": "PASS",
+  "launcher_installer_lifecycle": "PASS",
+  "launcher_gui_preview": "PASS",
+  "launcher_real_game_runtime": "PENDING",
+  "rc10_full_install_isolated": "NOT_COMPLETED_LOW_MEMORY_NO_MUTATION"
 }
