@@ -224,21 +224,11 @@ def uninstall(game):
     return f'Patch removido: {len(prepared)} arquivos restaurados.'
 
 def gui():
-    import tkinter as tk
-    from tkinter import filedialog,messagebox
-    root=tk.Tk(); root.title(APP); root.geometry("620x190"); path=tk.StringVar(value=r"C:\KeroQ\素晴らしき日々15th")
-    tk.Label(root,text="Pasta da Wonderful Everyday 15th Anniversary Edition:").pack(anchor="w",padx=14,pady=(14,4))
-    row=tk.Frame(root); row.pack(fill="x",padx=14); tk.Entry(row,textvariable=path).pack(side="left",fill="x",expand=True)
-    tk.Button(row,text="Procurar",command=lambda:path.set(filedialog.askdirectory() or path.get())).pack(side="left",padx=(8,0))
-    status=tk.StringVar(value="O instalador valida a versao e cria backup antes de alterar arquivos."); tk.Label(root,textvariable=status,wraplength=590).pack(padx=14,pady=14)
-    buttons=tk.Frame(root); buttons.pack()
-    def run(action):
-        try: status.set(action(Path(path.get()))); messagebox.showinfo(APP,status.get())
-        except Exception as exc: status.set(str(exc)); messagebox.showerror(APP,str(exc))
-    tk.Button(buttons,text="Instalar",width=16,command=lambda:run(install)).pack(side="left",padx=5)
-    tk.Button(buttons,text="Verificar",width=16,command=lambda:run(verify)).pack(side="left",padx=5)
-    tk.Button(buttons,text="Desinstalar",width=16,command=lambda:run(uninstall)).pack(side="left",padx=5)
-    root.mainloop()
+    from types import SimpleNamespace
+    from lopilol_ui import load_config, show_installer
+    data_dir = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent))
+    config = load_config(data_dir / "project.json")
+    show_installer(config, SimpleNamespace(install=install, verify=verify, uninstall=uninstall))
 
 if __name__=="__main__":
     parser=argparse.ArgumentParser(); parser.add_argument("--game",type=Path); parser.add_argument("--uninstall",action="store_true"); parser.add_argument("--verify",action="store_true"); args=parser.parse_args()

@@ -1,5 +1,12 @@
 # Histórico de versões
 
+## 0.3.0-rc8 — 28/09/2026
+
+- Ajusta o tamanho das oito legendas da barra inferior para aparecerem completas, preservando os ícones e quatro estados gráficos.
+- Identifica o instalador como Lopilol Traduções, com a logo e as cores da marca.
+- Mantém os 116 roteiros e as 49 escolhas localizadas da rc7.
+
+
 ## 0.3.0-rc7 — 28/09/2026
 
 - Traduz a barra inferior durante o jogo: salvar, carregar, salvar/carregar rápido, automático, pular, opções e ocultar.

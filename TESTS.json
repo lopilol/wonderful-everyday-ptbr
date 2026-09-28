@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0-rc7",
+  "version": "0.3.0-rc8",
   "script_source_ids_controls_pointers": "PASS",
   "translation_records": 61256,
   "filled_text_records": 61256,
@@ -33,10 +33,13 @@
   ],
   "release_fields_compared_to_saved_json": 98590,
   "prior_release_strings_preserved": "PASS",
-  "installer_provenance": "unchanged_sha256_from_audited_v0.3.0-rc1",
+  "installer_provenance": "newly_compiled_and_audited_rc8",
   "message_bar_images_localized": 4,
   "message_bar_icons_and_other_pixels_preserved": "PASS",
-  "release_fields_changed_since_rc6": 0,
-  "release_scripts_changed_since_rc6": 0,
-  "message_bar_runtime_visual_test": "PENDING"
+  "menu_labels_fit_slot": "PASS",
+  "installer_brand_preview": "PASS",
+  "release_fields_changed_since_rc7": 0,
+  "release_scripts_changed_since_rc7": 0,
+  "menu_runtime_visual_test": "PENDING",
+  "installer_gui_launch": "PASS"
 }

@@ -1,12 +1,12 @@
 # Subahibi / Wonderful Everyday — tradução PT-BR
 
-Patch PT-BR **v0.3.0-rc7** para a edição japonesa **15th Anniversary**, em Windows 10/11 de 64 bits.
+Patch PT-BR **v0.3.0-rc8** para a edição japonesa **15th Anniversary**, em Windows 10/11 de 64 bits.
 
-[Baixar o patch](https://github.com/lopilol/wonderful-everyday-ptbr/releases/tag/v0.3.0-rc7) · [Página do projeto](https://lopilol.github.io/subahibi/) · [Relatar erro](https://lopilol.github.io/relatar/)
+[Baixar o patch](https://github.com/lopilol/wonderful-everyday-ptbr/releases/tag/v0.3.0-rc8) · [Página do projeto](https://lopilol.github.io/subahibi/) · [Relatar erro](https://lopilol.github.io/relatar/)
 
 O pacote inclui o texto PT-BR dos sete capítulos, finais e extras catalogados: **61.256 de 61.256 entradas preenchidas (100%)**, distribuídas em 116 roteiros com falas. Inclui também as 49 imagens de escolhas localizadas do inventário.
 
-Esta atualização traduz os botões da barra inferior durante o jogo, preservando os ícones e estados de seleção. **A revisão editorial do texto está concluída** para os sete capítulos, finais e extras. Isso não significa que o jogo esteja livre de erros.
+Esta atualização ajusta as legendas da barra inferior para aparecerem completas e traz o instalador com a marca Lopilol Traduções. **A revisão editorial do texto está concluída** para os sete capítulos, finais e extras. Isso não significa que o jogo esteja livre de erros.
 
 **A conferência da apresentação e o teste jogável continuam.** O teste jogável de todas as rotas e escolhas e a conferência integral de imagens e interface permanecem pendentes. Pode haver erros de tradução, contexto e apresentação.
 
