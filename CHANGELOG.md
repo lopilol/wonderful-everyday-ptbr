@@ -1,5 +1,13 @@
 # Histórico de versões
 
+## 0.3.0-rc6 — 28/09/2026
+
+- Corrige uma sequência de caracteres de quebra de linha que aparecia indevidamente em um diálogo dos finais.
+- Confere os 98.590 campos de texto e nomes dos 116 roteiros contra a tradução salva.
+- Mantém as 49 imagens de escolhas e os demais recursos gráficos da rc5.
+- Testes jogáveis de todas as rotas e conferência das demais artes continuam.
+
+
 ## 0.3.0-rc5 — 27/09/2026
 
 - Atualiza 555 campos de texto em 43 roteiros em relação à rc4, a partir dos textos PT-BR salvos e conferidos na prévia local.
