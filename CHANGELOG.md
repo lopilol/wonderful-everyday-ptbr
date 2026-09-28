@@ -5,7 +5,9 @@
 - Refaz as legendas sobre as quatro artes originais da barra, com fonte serifada e ícones idênticos ao original.
 - Explica quando há arquivos de outra versão ou uma instalação antiga sem recibo, antes de modificar qualquer arquivo.
 - Evita erro de arquivo inexistente ao tentar remover um patch sem recibo.
-- Amplia a área de mensagens do instalador.
+- Substitui o painel anterior por um assistente clássico do Windows, com capa lateral, instruções, seleção da pasta, progresso e conclusão.
+- Usa a logo Lopilol com transparência e preserva as funções de instalar, verificar e desinstalar.
+- Mantém os arquivos de tradução e a compatibilidade de instalação da rc9.
 
 ## 0.3.0-rc8 — 28/09/2026
 

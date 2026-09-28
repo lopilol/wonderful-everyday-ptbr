@@ -35,7 +35,7 @@
   ],
   "release_fields_compared_to_saved_json": 98590,
   "prior_release_strings_preserved": "PASS",
-  "installer_provenance": "newly_compiled_and_audited_rc9",
+  "installer_provenance": "newly_compiled_wizard_rc9",
   "message_bar_images_localized": 4,
   "message_bar_icons_and_other_pixels_preserved": "PASS",
   "menu_labels_fit_slot": "PASS",
@@ -43,8 +43,13 @@
   "release_fields_changed_since_rc7": 0,
   "release_scripts_changed_since_rc7": 0,
   "menu_runtime_visual_test": "PENDING",
-  "installer_gui_launch": "PENDING",
+  "installer_gui_launch": "PASS",
   "menu_original_icons_pixel_identical": "PASS",
   "installer_gui_source_constructs": "PASS",
-  "legacy_recovery_isolated": "PASS"
+  "legacy_recovery_isolated": "PASS",
+  "installer_wizard_navigation": "PASS",
+  "installer_background_worker": "PASS",
+  "installer_transparent_logo": "PASS",
+  "installer_gui_runtime_visual": "PASS",
+  "installer_style": "Windows native wizard"
 }
