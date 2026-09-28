@@ -66,11 +66,11 @@ def build_window(config, preview=False, backend=None):
     label(identity, "Lopilol Traduções", size=23, color=PAPER, weight="bold", bg=INK).pack(anchor="w", pady=(6, 0))
     label(identity, "INSTALADOR DE PATCHES PT-BR", size=9, color="#e9c6e2", weight="bold", bg=INK).pack(anchor="w", pady=(2, 0))
 
-    card = tk.Frame(root, bg=PAPER, highlightbackground=BORDER, highlightthickness=1)
+    card = tk.Frame(root, bg=PAPER, relief="raised", borderwidth=3)
     card.pack(fill="both", expand=True, padx=35, pady=(0, 18))
     top = tk.Frame(card, bg=PAPER)
     top.pack(fill="x", padx=27, pady=(24, 0))
-    badge = tk.Frame(top, bg="#f8eaf0")
+    badge = tk.Frame(top, bg="#f8eaf0", relief="raised", borderwidth=2)
     badge.pack(side="right", pady=3)
     label(badge, config["version"], size=9, weight="bold", color=VIOLET, bg="#f8eaf0").pack(padx=11, pady=6)
     label(top, config["title"], size=20, weight="bold").pack(anchor="w")
@@ -81,14 +81,14 @@ def build_window(config, preview=False, backend=None):
     folder = tk.StringVar(value=config["default_game_dir"])
     path_row = tk.Frame(card, bg=PAPER)
     path_row.pack(fill="x", padx=27)
-    entry = tk.Entry(path_row, textvariable=folder, font=("Segoe UI", 11), fg=INK, bg="#ffffff", relief="flat", highlightbackground=BORDER, highlightcolor=CORAL, highlightthickness=1)
+    entry = tk.Entry(path_row, textvariable=folder, font=("Segoe UI", 11), fg=INK, bg="#ffffff", relief="sunken", borderwidth=2, highlightbackground=BORDER, highlightcolor=CORAL, highlightthickness=1)
     entry.pack(side="left", fill="x", expand=True, ipady=9)
-    browse = tk.Button(path_row, text="Procurar…", command=lambda: folder.set(filedialog.askdirectory() or folder.get()), font=("Segoe UI", 10, "bold"), fg=VIOLET, bg="#f8eaf0", relief="flat", cursor="hand2", padx=15, pady=8)
+    browse = tk.Button(path_row, text="Procurar…", command=lambda: folder.set(filedialog.askdirectory() or folder.get()), font=("Segoe UI", 10, "bold"), fg=VIOLET, bg="#f8eaf0", relief="raised", borderwidth=3, cursor="hand2", padx=15, pady=8)
     browse.pack(side="left", padx=(9, 0))
     label(card, config["folder_hint"], size=9, color=MUTED, anchor="w", wraplength=680, justify="left").pack(fill="x", padx=27, pady=(7, 0))
 
     status = tk.StringVar(value="Prévia visual. Nenhum arquivo será alterado." if preview else "Pronto para instalar. O patch confere a edição e cria backup.")
-    status_box = tk.Frame(card, bg="#f5edf7")
+    status_box = tk.Frame(card, bg="#f5edf7", relief="sunken", borderwidth=2)
     status_box.pack(fill="x", padx=27, pady=(22, 18))
     label(status_box, "STATUS", size=9, weight="bold", color=VIOLET, bg="#f5edf7").pack(anchor="w", padx=13, pady=(10, 1))
     tk.Label(status_box, textvariable=status, font=("Segoe UI", 10), fg=INK, bg="#f5edf7", anchor="w", wraplength=650, justify="left").pack(fill="x", padx=13, pady=(0, 11))
@@ -109,7 +109,7 @@ def build_window(config, preview=False, backend=None):
 
     actions = (("Instalar patch", "install", CORAL, PAPER), ("Verificar", "verify", "#eee1ee", VIOLET), ("Desinstalar", "uninstall", "#eee1ee", VIOLET))
     for title, method, bg, fg in actions:
-        tk.Button(row, text=title, command=lambda method=method: run(method), state="disabled" if preview else "normal", font=("Segoe UI", 10, "bold"), fg=fg, bg=bg, disabledforeground=fg, relief="flat", cursor="hand2", padx=17, pady=11).pack(side="left", padx=(0, 8))
+        tk.Button(row, text=title, command=lambda method=method: run(method), state="disabled" if preview else "normal", font=("Segoe UI", 10, "bold"), fg=fg, bg=bg, disabledforeground=fg, relief="raised", borderwidth=3, cursor="hand2", padx=17, pady=11).pack(side="left", padx=(0, 8))
     label(card, "Projeto de fãs · Jogos e artes pertencem aos titulares.", size=9, color=MUTED, anchor="w").pack(fill="x", padx=27, pady=(16, 16))
     return root
 
@@ -117,5 +117,4 @@ def build_window(config, preview=False, backend=None):
 def show_installer(config, backend):
     root = build_window(config, backend=backend)
     root.mainloop()
-
 

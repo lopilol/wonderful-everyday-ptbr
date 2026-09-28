@@ -4,6 +4,7 @@
 
 - Ajusta o tamanho das oito legendas da barra inferior para aparecerem completas, preservando os ícones e quatro estados gráficos.
 - Identifica o instalador como Lopilol Traduções, com a logo e as cores da marca.
+- Usa bordas em relevo e campos rebaixados no estilo clássico do Windows.
 - Mantém os 116 roteiros e as 49 escolhas localizadas da rc7.
 
 
