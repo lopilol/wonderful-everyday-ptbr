@@ -4,11 +4,11 @@ Patch PT-BR **v0.3.0-rc9** para a edição japonesa **15th Anniversary**, em Win
 
 [Baixar o patch](https://github.com/lopilol/wonderful-everyday-ptbr/releases/tag/v0.3.0-rc9) · [Página do projeto](https://lopilol.github.io/subahibi/) · [Relatar erro](https://lopilol.github.io/relatar/)
 
-O pacote inclui o texto PT-BR dos sete capítulos, finais e extras catalogados: **61.256 de 61.256 entradas preenchidas (100%)**, distribuídas em 116 roteiros com falas. Inclui também as 49 imagens de escolhas localizadas do inventário.
+A tradução da edição de aniversário está pronta! Você pode jogar os sete capítulos, finais e extras em português. As imagens de escolha também foram traduzidas.
 
-Esta atualização preserva a arte original da barra inferior, com legendas em fonte serifada, e melhora o diagnóstico de instalações antigas sem recibo. **A revisão editorial do texto está concluída** para os sete capítulos, finais e extras. Isso não significa que o jogo esteja livre de erros.
+A versão da Steam ainda não está pronta. Estamos adaptando a tradução para ela, mas este patch é só para a edição japonesa **15th Anniversary**.
 
-**A conferência da apresentação e o teste jogável continuam.** O teste jogável de todas as rotas e escolhas e a conferência integral de imagens e interface permanecem pendentes. Pode haver erros de tradução, contexto e apresentação.
+Ainda estamos testando todas as rotas e conferindo as imagens e os menus. Pode haver erros de texto, contexto ou apresentação. Se encontrar alguma coisa estranha, [avise a gente](https://lopilol.github.io/relatar/), de preferência com o capítulo e um print.
 
 ## Compatibilidade
 
@@ -29,6 +29,8 @@ Não instale sobre outro patch ou arquivos modificados. Guarde os backups até c
 
 ## Relatos de erros
 
-Use https://lopilol.github.io/relatar/ e informe a obra, edição, versão do patch, capítulo e o problema encontrado. O formulário aceita capturas de tela.
+Achou um erro? Mande pelo [formulário de relatos](https://lopilol.github.io/relatar/). Diga qual edição está usando, a versão do patch e onde aconteceu. Você também pode enviar prints.
 
 Projeto de fãs. Jogos e artes pertencem aos titulares.
+
+Siga a Lopilol no Twitter: [@lopilolbr](https://x.com/lopilolbr).
