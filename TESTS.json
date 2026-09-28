@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0-rc6",
+  "version": "0.3.0-rc7",
   "script_source_ids_controls_pointers": "PASS",
   "translation_records": 61256,
   "filled_text_records": 61256,
@@ -20,7 +20,7 @@
   "all_choices_runtime_test": "PENDING",
   "choice_images_localized": 49,
   "choice_images_inventoried": 49,
-  "graphics_unchanged_from_rc4": true,
+  "graphics_unchanged_from_rc4": false,
   "public_provenance_scan": "PASS",
   "tested_scripts": 116,
   "tested_data_archives": 4,
@@ -34,6 +34,9 @@
   "release_fields_compared_to_saved_json": 98590,
   "prior_release_strings_preserved": "PASS",
   "installer_provenance": "unchanged_sha256_from_audited_v0.3.0-rc1",
-  "release_fields_changed_since_rc5": 1,
-  "release_scripts_changed_since_rc5": 1
+  "message_bar_images_localized": 4,
+  "message_bar_icons_and_other_pixels_preserved": "PASS",
+  "release_fields_changed_since_rc6": 0,
+  "release_scripts_changed_since_rc6": 0,
+  "message_bar_runtime_visual_test": "PENDING"
 }

@@ -1,5 +1,12 @@
 # Histórico de versões
 
+## 0.3.0-rc7 — 28/09/2026
+
+- Traduz a barra inferior durante o jogo: salvar, carregar, salvar/carregar rápido, automático, pular, opções e ocultar.
+- Preserva os ícones, as dimensões e os quatro estados gráficos dos botões.
+- Mantém os textos dos 116 roteiros, as 49 escolhas localizadas e as demais correções da rc6.
+
+
 ## 0.3.0-rc6 — 28/09/2026
 
 - Corrige uma sequência de caracteres de quebra de linha que aparecia indevidamente em um diálogo dos finais.
