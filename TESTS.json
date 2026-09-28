@@ -5,6 +5,11 @@
   "filled_text_records": 61256,
   "registered_reviewed_records": 57635,
   "registered_pending_records": 3621,
+  "owner_editorial_review": {
+    "declared_complete": true,
+    "declared_date": "2026-09-27",
+    "independently_verified": false
+  },
   "submitted_review_inventory": {
     "expected": 3628,
     "received": 3628
