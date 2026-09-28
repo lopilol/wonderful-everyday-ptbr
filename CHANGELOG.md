@@ -1,5 +1,19 @@
 # Histórico de versões
 
+## 0.3.0-rc5 — 27/09/2026
+
+- Atualiza 555 campos de texto em 43 roteiros em relação à rc4, a partir dos textos PT-BR salvos e conferidos na prévia local.
+- Incorpora as propostas de correção aplicadas na última rodada e ajustes posteriores de tradução e pontuação.
+- Corrige falas com aspas de fechamento ausentes e uma frase que permanecia em japonês.
+- Preserva as omissões da fala 2_0714:1196 após comparação com as duas edições e mantém separadas as falas 2_0716:2037 e 2041.
+- Mantém as 49 imagens de escolhas localizadas e os recursos gráficos da rc4.
+- Preserva os textos acrescentados pela rc4 durante a reconstrução dos roteiros.
+- Atualiza o endereço para envio de relatos de erros.
+
+Texto preenchido: 100%. Esta é uma versão de teste; revisão integral e testes jogáveis de todas as rotas permanecem pendentes.
+
+
+
 ## 0.3.0-rc4 — correção das imagens de escolha (25/09/2026)
 
 - As 49 imagens de escolhas catalogadas estão localizadas em PT-BR, nos três estados de cada botão.

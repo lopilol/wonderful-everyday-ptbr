@@ -1,12 +1,22 @@
 {
-  "version": "0.3.0-rc4",
+  "version": "0.3.0-rc5",
   "script_source_ids_controls_pointers": "PASS",
   "translation_records": 61256,
-  "reviewed_scope": "45756/49542",
-  "remaining_review": 3786,
+  "filled_text_records": 61256,
+  "registered_reviewed_records": 57635,
+  "registered_pending_records": 3621,
+  "submitted_review_inventory": {
+    "expected": 3628,
+    "received": 3628
+  },
   "compiled_installer_tests": "PASS",
   "all_route_playthrough": "PENDING",
   "later_graphics_and_interface_qc": "PENDING",
+  "all_choices_runtime_test": "PENDING",
+  "choice_images_localized": 49,
+  "choice_images_inventoried": 49,
+  "graphics_unchanged_from_rc4": true,
+  "public_provenance_scan": "PASS",
   "tested_scripts": 116,
   "tested_data_archives": 4,
   "checks": [
@@ -16,11 +26,9 @@
     "uninstall_restores_archives_and_removes_scripts",
     "verify_missing_returns_nonzero"
   ],
-  "public_provenance_scan": "PASS",
-  "choice_images_localized": 49,
-  "choice_images_inventoried": 49,
-  "choice_image_roundtrips": "PASS",
-  "all_choices_runtime_test": "PENDING",
-  "choice_sprite_suffix_check": "PASS",
+  "release_fields_compared_to_saved_json": 98590,
+  "release_fields_changed_since_rc4": 555,
+  "release_scripts_changed_since_rc4": 43,
+  "prior_release_strings_preserved": "PASS",
   "installer_provenance": "unchanged_sha256_from_audited_v0.3.0-rc1"
 }

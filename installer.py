@@ -1,7 +1,7 @@
 import argparse, base64, hashlib, json, struct, sys, os
 from pathlib import Path
 
-APP = "Wonderful Everyday PT-BR - Capitulos 1 e 2"
+APP = "Wonderful Everyday PT-BR - Patch de teste"
 STATE = ".wonderful-everyday-ptbr"
 
 def sha(data): return hashlib.sha256(data).hexdigest()
