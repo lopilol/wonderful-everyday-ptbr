@@ -56,5 +56,5 @@
   "launcher_installer_lifecycle": "PASS",
   "launcher_gui_preview": "PASS",
   "launcher_real_game_runtime": "PENDING",
-  "rc10_full_install_isolated": "NOT_COMPLETED_LOW_MEMORY_NO_MUTATION"
+  "rc10_full_install_isolated": "PASS_116_SCRIPTS_4_ARCHIVES_RESTORED_SHA256"
 }
