@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0-rc10",
+  "version": "0.3.0-rc11",
   "script_source_ids_controls_pointers": "PASS",
   "translation_records": 61256,
   "filled_text_records": 61256,
@@ -56,5 +56,11 @@
   "launcher_installer_lifecycle": "PASS",
   "launcher_gui_preview": "PASS",
   "launcher_real_game_runtime": "PENDING",
-  "rc10_full_install_isolated": "PASS_116_SCRIPTS_4_ARCHIVES_RESTORED_SHA256"
+  "rc10_full_install_isolated": "PASS_116_SCRIPTS_4_ARCHIVES_RESTORED_SHA256",
+  "release_fields_changed_since_rc10": 331,
+  "same_script_lengths_as_rc10": true,
+  "old_saves_loaded_and_advanced": 2,
+  "rc11_full_install_isolated": "PASS",
+  "compiled_rc11_verify_uninstall": "PASS",
+  "final_candidate_saves_loaded_and_advanced": 2
 }

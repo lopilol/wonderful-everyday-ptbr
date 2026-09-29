@@ -1,8 +1,8 @@
 Subahibi / Wonderful Everyday — tradução PT-BR
 
-Patch PT-BR v0.3.0-rc10 para a edição japonesa 15th Anniversary, em Windows 10/11 de 64 bits.
+Patch PT-BR v0.3.0-rc11 para a edição japonesa 15th Anniversary, em Windows 10/11 de 64 bits.
 
-Baixar o patch: https://github.com/lopilol/wonderful-everyday-ptbr/releases/tag/v0.3.0-rc10/
+Baixar o patch: https://github.com/lopilol/wonderful-everyday-ptbr/releases/tag/v0.3.0-rc11/
 Página do projeto: https://lopilol.github.io/subahibi/
 Relatar erro: https://lopilol.github.io/relatar/
 
@@ -22,7 +22,7 @@ O pacote inclui o texto PT-BR dos sete capítulos, finais e extras catalogados: 
 3. Abra WonderfulEveryday-PTBR.exe e selecione a pasta da edição japonesa 15th Anniversary que contém BGI.exe.
 4. Escolha Instalar. O programa confere a edição e cria backups antes de aplicar as alterações.
 5. Use Verificar. Para remover o patch, use Desinstalar no mesmo instalador.
-6. Depois da instalação, abra "Jogar Wonderful Everyday.exe" na pasta do jogo. Ele consulta as versões publicadas ao iniciar e oferece o download quando houver atualização. Se não houver conexão, abre o jogo normalmente. Abrir BGI.exe diretamente não mostra o aviso.
+6. Depois da instalação, abra "Jogar Wonderful Everyday.exe" na pasta do jogo, ao lado de BGI.exe. Não abra a cópia que ficou na pasta extraída do ZIP. Ele consulta as versões publicadas ao iniciar e oferece o download quando houver atualização. Se não houver conexão, abre o jogo normalmente. Abrir BGI.exe diretamente não mostra o aviso.
 
 Não instale sobre outro patch ou arquivos modificados. Guarde os backups até concluir os testes.
 

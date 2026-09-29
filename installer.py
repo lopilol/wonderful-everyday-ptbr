@@ -109,6 +109,37 @@ def validate_game_folder(game):
         raise ValueError('Selecione a pasta do jogo que contém BGI.exe.')
     return game
 
+def build_script(original, item):
+    if sha(original)!=item['source_sha256']:
+        raise ValueError('Fonte incompativel: '+item['member'])
+    output=bytearray(original)
+    pointer_ranges=[]
+    for offset,value in item['pointers']:
+        if not isinstance(offset,int) or not isinstance(value,int) or offset<0 or offset+4>len(original) or value<0 or value>0xffffffff:
+            raise ValueError('Ponteiro invalido.')
+        pointer_ranges.append((offset,offset+4))
+        struct.pack_into('<I',output,offset,value)
+    occupied=[]
+    code_end=item.get('code_end',len(original))
+    if not isinstance(code_end,int) or code_end<0 or code_end>len(original):
+        raise ValueError('Limite do roteiro invalido.')
+    for patch in item.get('data_patches',[]):
+        offset=patch['offset']
+        data=base64.b64decode(patch['data_base64'],validate=True)
+        if not isinstance(offset,int) or not data or offset<code_end or offset+len(data)>len(original):
+            raise ValueError('Texto de substituicao fora da area permitida.')
+        end=offset+len(data)
+        if any(a<end and b>offset for a,b in occupied+pointer_ranges):
+            raise ValueError('Sobreposicao no roteiro.')
+        if sha(original[offset:end])!=patch['before_sha256']:
+            raise ValueError('Fonte de texto incompativel: '+item['member'])
+        output[offset:end]=data
+        occupied.append((offset,end))
+    output.extend(base64.b64decode(item['append_base64'],validate=True))
+    if sha(output)!=item['output_sha256']:
+        raise ValueError('Patch corrompido: '+item['member'])
+    return bytes(output)
+
 def install(game):
     game=validate_game_folder(game); assert_game_closed(game); manifest=load_manifest()
     state=game/STATE; receipt_path=state/'receipt.json'; backup=state/'backup'
@@ -128,13 +159,7 @@ def install(game):
                 raise ValueError('O arquivo '+archive_name+' difere do original esperado. Pode haver um patch antigo ou outra edição. Restaure o backup original ou use uma instalação limpa da 15th Anniversary. Nenhum arquivo foi alterado.')
             archives[archive_name]=True
         original=extract_member(archive,name)
-        if sha(original)!=item['source_sha256']: raise ValueError('Fonte incompativel: '+name)
-        output=bytearray(original)
-        for offset,value in item['pointers']:
-            if offset<0 or offset+4>len(original): raise ValueError('Ponteiro invalido.')
-            struct.pack_into('<I',output,offset,value)
-        output.extend(base64.b64decode(item['append_base64'],validate=True))
-        if sha(output)!=item['output_sha256']: raise ValueError('Patch corrompido: '+name)
+        output=build_script(original,item)
         target=game/name
         if target.is_symlink(): raise ValueError('Arquivo simbolico nao permitido: '+name)
         previous=target.read_bytes() if target.exists() else None
